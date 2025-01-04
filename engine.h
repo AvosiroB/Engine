@@ -3,6 +3,7 @@
 #include <thread>
 #include <vector>
 #include <cstdio>
+#include <vulkan/vulkan.h>
 
 class Entity {
 public:

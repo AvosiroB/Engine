@@ -1,7 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
+project(Engine)
 
-project(Game)
+# Установка путей к Vulkan SDK
+set(Vulkan_INCLUDE_DIR $ENV{VULKAN_SDK}/include)
+set(Vulkan_LIBRARY $ENV{VULKAN_SDK}/lib/libvulkan.so)
 
-set(CMAKE_CXX_STANDARD 20)
+# Указываем, где искать Vulkan
+find_package(Vulkan REQUIRED)
 
-add_executable(game main.cpp)
+# Добавляем исполняемый файл
+add_executable(${PROJECT_NAME} main.cpp)
+
+# Линковка с Vulkan
+target_include_directories(${PROJECT_NAME} PRIVATE ${Vulkan_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} ${Vulkan_LIBRARY})
