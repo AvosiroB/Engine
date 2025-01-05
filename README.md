@@ -2,17 +2,25 @@
 
 Игровой движок на Vulkan+C++.
 
+
+## Установка Vulkan
 Для установки Vulkan выполнить:
 ```
-./scripts/setup_vulkan
+./scripts/setup_vulkan.sh
 ```
 
+
+## Сборка проекта
 Для сборки проекта:
 ```
-./scripts/build
+./scripts/build.sh
+```
+Для сборки проекта без компиляции шейдеров:
+```
+./scripts/build.sh --skip-shaders
 ```
 
 Для очистки сборки:
 ```
-./scripts/clear
+./scripts/clear.sh
 ```
