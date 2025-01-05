@@ -8,9 +8,12 @@ set(Vulkan_LIBRARY $ENV{VULKAN_SDK}/lib/libvulkan.so)
 # Указываем, где искать Vulkan
 find_package(Vulkan REQUIRED)
 
+# Указываем, где искать GLFW
+find_package(glfw3 REQUIRED)
+
 # Добавляем исполняемый файл
 add_executable(${PROJECT_NAME} main.cpp)
 
-# Линковка с Vulkan
+# Линковка с Vulkan и GLFW
 target_include_directories(${PROJECT_NAME} PRIVATE ${Vulkan_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} ${Vulkan_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${Vulkan_LIBRARY} glfw)
