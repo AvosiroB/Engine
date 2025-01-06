@@ -11,7 +11,7 @@ echo 'export PATH=$VULKAN_SDK/bin:$PATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=$VULKAN_SDK/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
 echo 'export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json' >> ~/.bashrc
 # shellcheck disable=SC2016
-echo 'export VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d' >> ~/.bashrc
+echo 'export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d' >> ~/.bashrc
 
 rm vulkan-sdk.tar.gz
 
